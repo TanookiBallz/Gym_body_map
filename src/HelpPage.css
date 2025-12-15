@@ -1,0 +1,97 @@
+/* === HelpPage.css === */
+
+/* Контейнер страницы */
+.help-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* Если вдруг видео не прогрузится, будет темный фон */
+  background-color: #050505; 
+}
+
+/* Стеклянная подложка для текста */
+.content-box {
+  background: rgba(0, 0, 0, 0.75); /* Чуть темнее для читаемости текста */
+  backdrop-filter: blur(20px);      /* Сильный блюр фона */
+  padding: 50px 60px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  
+  /* Размеры и скролл, если текст не влезет на маленьком экране */
+  max-width: 900px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto; /* Скролл внутри блока, если экран низкий */
+}
+
+/* Заголовок */
+.content-box h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #e74c3c;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-size: 32px;
+  text-shadow: 0 0 10px rgba(231, 76, 60, 0.3);
+}
+
+/* Текст */
+.text-content {
+  line-height: 1.8;
+  font-size: 16px;
+  color: #ccc; /* Светло-серый, чтобы глаза не резало */
+  text-align: justify; /* Чтобы текст был ровным "кирпичиком" */
+}
+
+.text-content p {
+  margin-bottom: 20px;
+}
+
+.text-content strong {
+  color: #fff; /* Выделяем ключевые слова чисто белым */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Кнопка НАЗАД */
+.back-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 15px 30px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto; /* Центрируем кнопку */
+}
+
+.back-btn:hover {
+  background: #e74c3c;
+  border-color: #e74c3c;
+  box-shadow: 0 0 20px rgba(231, 76, 60, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Кастомный скроллбар для этого блока */
+.content-box::-webkit-scrollbar {
+  width: 8px;
+}
+.content-box::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.3);
+}
+.content-box::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+.content-box::-webkit-scrollbar-thumb:hover {
+  background: #e74c3c;
+}

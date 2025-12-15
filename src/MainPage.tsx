@@ -129,9 +129,9 @@ function MainPage() {
       {selectedMuscle && (
         <div className="glass-panel">
             <div className="panel-header">
-                <h2>{selectedMuscle} WORKOUT</h2>
-                <button className="close-btn" onClick={() => setSelectedMuscle(null)}>×</button>
+                <h2>{selectedMuscle}</h2>
             </div>
+            <button className="close-btn" onClick={() => setSelectedMuscle(null)}>×</button>
             
             <div className="exercises-list">
                 {exercises.map((ex) => (
