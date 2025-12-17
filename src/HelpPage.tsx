@@ -14,7 +14,7 @@ function HelpPage() {
       </div>
       <div className="content-box" style={{ maxWidth: '900px', textAlign: 'left' }}>
         <h1 style={{ textAlign: 'center', marginBottom: '30px', color: '#e74c3c', letterSpacing: '4px' }}>
-          ФУНДАМЕНТ
+          База
         </h1>
         <div style={{ lineHeight: '1.8', fontSize: '16px', color: '#ddd' }}>
           <p style={{ marginBottom: '20px' }}>
@@ -41,7 +41,7 @@ function HelpPage() {
         </div>
         <div style={{ display: 'flex', justifyContent: 'center', marginTop: '40px' }}>
             <button onClick={() => navigate('/')} className="back-btn">
-            ➜ ВЕРНУТЬСЯ К ТРЕНИРОВКАМ
+             Назад 
             </button>
         </div>
       </div>

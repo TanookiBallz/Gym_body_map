@@ -57,31 +57,48 @@ function MainPage() {
 
     
       <nav className="top-nav">
-        <div className="logo"></div>
+        <div className="logo" onClick={() => navigate('/')} style={{cursor: 'pointer', color: 'white'}}>Greek God</div>
+        
         <div className="nav-controls">
+          
+
           <button 
             onClick={toggleMusic} 
             className={`music-btn ${isPlaying ? 'playing' : ''}`}
             title="Play/Pause Music"
           >
-        
-            <svg 
-              width="24" 
-              height="24" 
-              viewBox="0 0 24 24" 
-              fill="currentColor" 
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
               <path d="M12 3V13.55C11.41 13.21 10.73 13 10 13C7.79 13 6 14.79 6 17C6 19.21 7.79 21 10 21C12.21 21 14 19.21 14 17V7H18V3H12Z" />
             </svg>
           </button>
-          <button onClick={() => navigate('/help')} className="help-btn">
-            Базовые советы
+
+          <button onClick={() => navigate('/nutrition')} className="help-btn">
+
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="3" y="11" width="18" height="10" rx="2" ry="2"></rect>
+              <circle cx="12" cy="5" r="2"></circle>
+              <path d="M12 7v4"></path>
+              <line x1="8" y1="16" x2="8" y2="16"></line>
+              <line x1="16" y1="16" x2="16" y2="16"></line>
+            </svg>
+      
+            <span>AI COACH</span>
           </button>
+
+      
+          <button onClick={() => navigate('/help')} className="help-btn">
+      
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+            </svg>
+            <span>СОВЕТЫ</span>
+          </button>
+
         </div>
       </nav>
 
-   {/* ДЭВИД ЛЕЙД */}
+
       <div className="hero-section">
         <div className="body-wrapper">
             <img 
